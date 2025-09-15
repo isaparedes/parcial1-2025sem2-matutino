@@ -4,3 +4,49 @@
   font-weight: 700;
   font-style: normal;
 }
+
+body {
+  font-family: "Rufina";
+}
+
+img {
+  width: 200px;
+}
+
+h3, h5{
+  text-align: center;
+}
+
+h5 {
+  font-size: 10px;
+  color: gray;
+}
+
+div {
+  display: block;
+  margin: 60px;
+  width: 700px;
+}
+
+.derecha {
+  text-align: right;
+}
+
+#bloque1 {
+  background-color: rgba(223, 212, 4, 0.856);
+  display: flex;
+}
+
+#titulo {
+  font-size: 30px;
+  justify-content: center;
+  color: rgb(164, 12, 12);
+  padding-top: 50px;
+}
+
+#subtitulo {
+  color:rgb(164, 12, 12);
+  font-size: 10px;
+}
+
+
