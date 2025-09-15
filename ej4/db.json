@@ -3,13 +3,13 @@
     {
       "id": "1",
       "name": "Alice",
-      "role": "Admin",
+      "role": "Viewer",
       "email": "alice@example.com"
     },
     {
       "id": "2",
       "name": "Bob",
-      "role": "Editor",
+      "role": "Viewer",
       "email": "bob@example.com"
     },
     {
@@ -19,16 +19,10 @@
       "email": "cara@example.com"
     },
     {
-      "id": "c286",
+      "id": "acbc",
       "name": "Isabela",
       "role": "Admin",
       "email": "isaparebale@gmail.com"
-    },
-    {
-      "id": "befa",
-      "name": "Juan",
-      "role": "Editor",
-      "email": "Pérez"
     }
   ]
 }

@@ -16,11 +16,11 @@ async function mostrarUsuarios() {
             item.append(datos);
             const promote = document.createElement("button");
             promote.textContent = "Promote";
-            promote.onclick = () => promote(user);
+            promote.onclick = () => promoteUser(user.id, user.role);
             item.append(promote);
             const demote = document.createElement("button");
             demote.textContent = "Demote";
-            demote.onclick = () => demote(user);
+            demote.onclick = () => demoteUser(user.id, user.role);
             item.append(demote);
             const btndelete = document.createElement("button");
             btndelete.textContent = "Delete";
@@ -58,16 +58,16 @@ botonAdd.addEventListener('click', async (event) => {
     }
 });
 
-async function promote(user) {
+async function promoteUser(id, userRole) {
   try {
     let rol = "Admin";
-    if (user.role == "Viewer") {
+    if (userRole == "Viewer") {
         rol == "Editor";
     }
-    if (user.role = "Editor") {
+    if (userRole == "Editor") {
         rol = "Admin";
     }
-    const urlUser = `${url}/${user.id}`;
+    const urlUser = `${url}/${id}`;
     const response = await fetch(urlUser, {
       method: 'PATCH',
       headers: {'Content-Type': 'application/json'},
@@ -84,16 +84,16 @@ async function promote(user) {
   }
 }
 
-async function demote(user) {
+async function demoteUser(id, userRole) {
   try {
     let rol = "Viewer";
-    if (user.role == "Editor") {
+    if (userRole == "Editor") {
         rol = "Viewer";
     }
-    if (user.role == "Admin") {
+    if (userRole == "Admin") {
         rol = "Editor";
     }
-    const urlUser = `${url}/${user.id}`;
+    const urlUser = `${url}/${id}`;
     const response = await fetch(urlUser, {
       method: 'PATCH',
       headers: {'Content-Type': 'application/json'},
